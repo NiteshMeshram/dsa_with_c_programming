@@ -1,0 +1,23 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Build and Run C Program",
+      "type": "shell",
+      "command": "gcc",
+      "args": [
+        "-Wall",                     // show warnings
+        "-std=c11",                  // C standard
+        "${file}",                   // compile current file
+        "-o",                        // output option
+        "${fileDirname}/${fileBasenameNoExtension}" // output exe in same folder
+      ],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "problemMatcher": ["$gcc"],
+      "detail": "Compile current C file with gcc"
+    }
+  ]
+}
